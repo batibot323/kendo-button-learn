@@ -34,7 +34,6 @@ export class ButtonTutorialComponent implements OnInit {
 
   constructor() { }
 
-  // Dummy comment!
   ngOnInit() {
     this.look ="flat";
     this.disabled = false;
