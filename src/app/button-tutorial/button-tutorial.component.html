@@ -30,11 +30,12 @@
     <button [look]="'outline'" kendoButton [iconClass]="'fas fa-bell fa-4x'" style="color:darkgreen">fas fa-bell fa-4x</button>
 </div>
 <div style="border: 1px solid black">
-    <kendo-buttongroup id="kendo-btn-grp-1" [look]="look">
+    <kendo-buttongroup id="kendo-btn-grp-1" [look]="look" [disabled]="disabled">
         <button kendoButton>No Style</button>
         <button [look]="'outline'" kendoButton>Outline</button>
         <button [look]="'flat'" kendoButton>Flat</button>
         <button [primary]="true" kendoButton (click)="changeButtonsToBlue()">Change all buttons to blue</button>
         <button [primary]="true" kendoButton (click)="changeButtonsToBrown()">Change all buttons to brown</button>
     </kendo-buttongroup>
+    <button [primary]="true" kendoButton (click)="disableButtonGroup()">Disable button group. This is not part of that group.</button>
 </div>

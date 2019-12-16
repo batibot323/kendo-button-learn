@@ -8,9 +8,9 @@ import { style } from '@angular/animations';
 })
 export class ButtonTutorialComponent implements OnInit {
   look: string;
+  disabled: boolean;
 
   changeButtonsToBlue(): void {
-    this.look = "flat";
     console.log("To blue clicked!");
     var buttons = document.getElementById('kendo-btn-grp-1').children;
     var btnArray = Array.from(buttons);
@@ -20,7 +20,6 @@ export class ButtonTutorialComponent implements OnInit {
   }
 
   changeButtonsToBrown(): void {
-    this.look = "outline";
     console.log("To brown clicked!");
     var buttons = document.getElementById('kendo-btn-grp-1').children;
     var btnArray = Array.from(buttons);
@@ -29,10 +28,15 @@ export class ButtonTutorialComponent implements OnInit {
     })
   }
 
+  disableButtonGroup(): void {
+    this.disabled = !this.disabled;
+  }
+
   constructor() { }
 
   ngOnInit() {
     this.look ="flat";
+    this.disabled = false;
   }
 
 }
