@@ -7,11 +7,12 @@ import { style } from '@angular/animations';
   styleUrls: ['./button-tutorial.component.css']
 })
 export class ButtonTutorialComponent implements OnInit {
+  look: string;
+
   changeButtonsToBlue(): void {
+    this.look = "flat";
     console.log("To blue clicked!");
     var buttons = document.getElementById('kendo-btn-grp-1').children;
-    // Can't get this to work. This is different from specifing look="flat" in .html.
-    document.getElementById('kendo-btn-grp-1').setAttribute("ng-reflect-look", "flat");
     var btnArray = Array.from(buttons);
     btnArray.forEach(btn => {
       btn.setAttribute("style", "color: blue");
@@ -19,6 +20,7 @@ export class ButtonTutorialComponent implements OnInit {
   }
 
   changeButtonsToBrown(): void {
+    this.look = "outline";
     console.log("To brown clicked!");
     var buttons = document.getElementById('kendo-btn-grp-1').children;
     var btnArray = Array.from(buttons);
@@ -30,6 +32,7 @@ export class ButtonTutorialComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.look ="flat";
   }
 
 }
