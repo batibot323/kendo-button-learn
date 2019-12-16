@@ -1,2 +1,31 @@
 <p>button-tutorial works!</p>
-<button kendoButton [icon]="'pencil'" style="color:darkmagenta">This is my button!</button>
+<div>
+    <button kendoButton [icon]="'pencil'" style="color:darkmagenta">pencil</button>
+    <button kendoButton [icon]="'unlock'" style="color:darkmagenta">unlock</button>
+    <button kendoButton [icon]="'attachment'" style="color:darkmagenta">attachment</button>
+    <button kendoButton [icon]="'delete'" style="color:darkmagenta">Delete this?</button>
+</div>
+<div>
+    <button [look]="'flat'" kendoButton [icon]="'pencil'" style="color:blue">pencil</button>
+    <button [look]="'flat'" kendoButton [icon]="'unlock'" style="color:blue">unlock</button>
+    <button [look]="'flat'" kendoButton [icon]="'attachment'" style="color:blue">attachment</button>
+    <button [look]="'flat'" kendoButton [icon]="'delete'" style="color:blue">Delete this?</button>
+</div>
+<div>
+    <button [look]="'outline'" kendoButton [icon]="'pencil'" style="color:darkgreen">pencil</button>
+    <button [look]="'outline'" kendoButton [icon]="'unlock'" style="color:darkgreen">unlock</button>
+    <button [look]="'outline'" kendoButton [icon]="'attachment'" style="color:darkgreen">attachment</button>
+    <button [look]="'outline'" kendoButton [icon]="'delete'" style="color:darkgreen">Delete this?</button>
+</div>
+<div>
+    <button [disabled]="true" [look]="'outline'" kendoButton [icon]="'pencil'" style="color:darkgreen">pencil</button>
+    <button [disabled]="true" [look]="'outline'" kendoButton [icon]="'unlock'" style="color:darkgreen">unlock</button>
+    <button [disabled]="true" [look]="'outline'" kendoButton [icon]="'attachment'" style="color:darkgreen">attachment</button>
+    <button [disabled]="true" [look]="'outline'" kendoButton [icon]="'delete'" style="color:darkgreen">Delete this?</button>
+</div>
+<div style="border: 1px solid black">
+    <button [look]="'outline'" kendoButton [iconClass]="'fas fa-calendar fa-fw fa-lg'" style="color:darkgreen">fas fa-calendar fa-fw fa-lg</button>
+    <button [look]="'outline'" kendoButton [iconClass]="'fas fa-balance-scale fa-fw fa-2x'" style="color:darkgreen">fas fa-balance-scale fa-2x</button>
+    <button [look]="'outline'" kendoButton [iconClass]="'fas fa-bath fa-3x'" style="color:darkgreen">fas fa-bath fa-3x</button>
+    <button [look]="'outline'" kendoButton [iconClass]="'fas fa-bell fa-4x'" style="color:darkgreen">fas fa-bell fa-4x</button>
+</div>
